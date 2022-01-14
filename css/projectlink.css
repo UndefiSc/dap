@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 1rem;
+    place-items: center;
+    margin: 20px 0px;
+    min-width: 100%;
+    
+}
+
+  .project-link {
+    position:relative;
+    border: 0px solid #e4e4e4;
+    margin: 15px 15px;
+    vertical-align: middle;
+    min-width: 230px;
+    min-height: 300px;
+    font-size: 13px;
+    text-decoration: none;
+    color:#34495E;
+    line-height:20px;
+    font-weight:bold;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #c6cbce;
+    box-shadow: 1px 1px 3px rgb(169, 169, 169);
+}
+  
+.projlink_body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.projlink_footer {
+    display: flex;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.projlink_name {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 10px 0 0px 0px;
+    margin: 0 0;
+    color: #305072;
+  }
+
+.project-link img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+.dev{
+    color: rgb(192, 158, 113);
+    padding: 10px;
+}
+
+.comp{
+    color: rgb(53, 208, 141);
+    padding: 10px;
+}
+
+.beta{
+    color: rgb(76, 147, 201);
+    padding: 10px;
+}
+
+.skip{
+    color: rgb(179, 22, 22);
+    padding: 10px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>DapIT - CSS Блог</title>
+            <link href="../style.css" rel="stylesheet" type="text/css"/>
+            <link href="../css/copy_button.css" rel="stylesheet" type="text/css"/>
+            <link rel="stylesheet" href="../highlight/styles/atom-one-dark.min.css">
+            <script src="../highlight/highlight.min.js"></script>
+            <script src="../js/animmenu.js"></script>
+            <script src="../js/copy_button.js"></script>
+            <script src="../js/change_main_window.js"></script>
+            <script src="../js/copy_button_gmail.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+
+    <body>
+        <input type="checkbox" id="nav-toggle" hidden onclick="toggle.call(this)" onclick="heightScreen()">
+
+        <div class="linklist-menu" id="nav">
+            <div class="linklist-border" id="nav">
+                <a href="../index.html" class="link-button">Главная</a>
+                <a href="../treads/history.html" class="link-button">История</a>
+                <a href="../treads/blog.html" class="link-button">Блог</a>
+                <a href="../treads/projects.html" class="link-button">Проекты</a>
+                <a href="../treads/js.html" class="link-button">JS</a>
+                <a href="../treads/html.html" class="link-button">HTML</a>
+                <a href="../treads/css.html" class="link-button">CSS</a>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <header class="mainmenubar">
+                <label for="nav-toggle" class="nav-toggle" onclick></label>
+                <div class="inputbox">
+                    <input class="searchbox" type="search" placeholder="Поиск по сайту" autocomplete="off">
+                    <input type="button" value="Поиск">
+                </div>
+                <a class="homebutton" id="logo_dapit" href="../index.html">
+                    <img class="daplogo" src="../src/logo.png" height="35">
+                </a>
+            </header>
+
+                <main class="main">
+                    <div class="style_hello">
+                    <h2 class="h2_namesite">CSS Блог:</h2>
+                    И так, начнем с азов.<br>
+                    1. <span class="border_tag_menu">Позиционирование</span>, без него никуда, и оно работает довольно просто.<br>
+                    Есть 3 основных типа позиционирования, <br>1 - relative, он работает относительно родительского тега, проще говоря как ты поставишь родительский тег так и будет стоять нужный тебе тэг.<br>
+                    Когда будет заполнять экран, скролл бар тоже появится. Каких-то других зависимостей нет.<br>
+                    2 - absolute, Он работает почти так-же как и relative, но с 1-им но. <br>Вместо родительского тега он будет находится относительно body, можно сказать на нулевых кординатах.<br>
+                    3 - fixed, У него все куда интереснее, он так-же как и absolute не зависит он родительского тега, так еще и в предачу при появлении скролл бара он будет висеть на своем месте. Так-что везде ставить его не нужно.<br>
+                    <br>
+                    И так, теперь к самому позиционированию, <br>
+                    <span class="border_tag_menu">width</span> и <span class="border_tag_menu">height</span> основные атрибуты для позиционирования, они исходя из названия указывают тегу на какой размер ему растянутся<br>
+                    есть еще <span class="border_tag_menu">top / left / right / bottom</span>, вот они уже указывают позицию для тега.<br>
+                    И да, на счет едениц измерения, их не очень много, лично я использую только <span class="border_tag_menu">px и %</span>.<br>
+                    Был такой момент когда мне нужно было прижать один тег к краю другого, <br>но если бы я прижал с помощью % то нужный мне тег вышел за пределы другого,<br>
+                    и как быть?, ставить не 100% а 90 или 70?. Нет, все проще! интересное решение я нашел для себя, возможно это говнокод но... какая разница?<br>
+                    <span class="border_tag_menu">calc(100% - 200px)</span>, небольшая хитрость, и все стоит где нужно.<br>
+                    <br>
+                    Так-же по поводу анимации, там на самом деле все очень легко (если нужно сделать слайдеры или плавно затухающую кнопку).<br>
+                    <span class="border_tag_menu">transition</span>, <br>он как я понял замедляет процесс изменения тега, делая из этого анимацию.<br>
+                    А скорость можно контралировать в долях секунды. Обычно это 0.2s, в сочитании с afler довольно приятный эффект изменеия цвета получается<br><br>
+                    Вообщем на этом все, пока-что больше нечего добавить.
+                </div>
+                </main>
+
+            <footer class="footer">
+
+                <a class="footer_github" href="https://github.com/UndefiSc"><img src="../src/github.png"></a>
+
+                <div class="tag_copy_button">
+                    <span class="copy_discord_button" onclick="copyTag()" onmouseout="outFunc()">
+                        <span class="notification" id="copy_notification">Нажмите что-бы скопировать</span>
+                        <img src="../src/discord-icon.png" height="25">
+                        <span class="copy_discord_tag" id="copy_discord_tag">IWantTo#5939</span>
+                        <span class="counter_to_copy" id="counter_to_copy">0</span>
+                    </span>
+                </div>
+
+                <span class="border"></span>
+
+                <span class="gmail_url tag_copy_button" onclick="copyUrlGmail()" onmouseout="outFuncUrl()">
+                    <span class="notification" id="copy_notification_gmail">Нажмите что-бы скопировать</span>
+                    <span style="color: rgb(255, 80, 41);">G</span>mail - <span id="copy_gmail_url">undefisc@gmail.com</span>
+                </span>
+
+        </footer>
+        <div class="shadow_button" id="shadow_button" style="visibility: hidden; position: fixed; z-index: 5; height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.419);" onclick="toggle.call(document.getElementById(`nav-toggle`))"></div>
+     </div>
+
+        
+        <script src="../js/adaptive.js"></script>
+    </body>
+</html>
+

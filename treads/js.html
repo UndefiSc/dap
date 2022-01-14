@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>DapIT - JavaScript Блог</title>
+            <link href="../style.css" rel="stylesheet" type="text/css"/>
+            <link href="../css/copy_button.css" rel="stylesheet" type="text/css"/>
+            <link rel="stylesheet" href="../highlight/styles/atom-one-dark.min.css">
+            <script src="../highlight/highlight.min.js"></script>
+            <script src="../js/animmenu.js"></script>
+            <script src="../js/copy_button.js"></script>
+            <script src="../js/change_main_window.js"></script>
+            <script src="../js/copy_button_gmail.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+
+    <body>
+        <input type="checkbox" id="nav-toggle" hidden onclick="toggle.call(this)" onclick="heightScreen()">
+
+        <div class="linklist-menu" id="nav">
+            <div class="linklist-border" id="nav">
+                <a href="../index.html" class="link-button">Главная</a>
+                <a href="../treads/history.html" class="link-button">История</a>
+                <a href="../treads/blog.html" class="link-button">Блог</a>
+                <a href="../treads/projects.html" class="link-button">Проекты</a>
+                <a href="../treads/js.html" class="link-button">JS</a>
+                <a href="../treads/html.html" class="link-button">HTML</a>
+                <a href="../treads/css.html" class="link-button">CSS</a>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <header class="mainmenubar">
+                <label for="nav-toggle" class="nav-toggle" onclick></label>
+                <div class="inputbox">
+                    <input class="searchbox" type="search" placeholder="Поиск по сайту" autocomplete="off">
+                    <input type="button" value="Поиск">
+                </div>
+                <a class="homebutton" id="logo_dapit" href="../index.html">
+                    <img class="daplogo" src="../src/logo.png" height="35">
+                </a>
+            </header>
+
+                <main class="main">
+                    <h2 class="h2_namesite">JavaScript Блог:</h2>
+
+                    <div class="frame_change-main-window-buttons">
+
+                        <h1>А сдесь пока-что пусто :p</h1>
+                        
+                    </div>
+                    
+                </main>
+
+            <footer class="footer">
+
+                <a class="footer_github" href="https://github.com/UndefiSc"><img src="../src/github.png"></a>
+
+                <div class="tag_copy_button">
+                    <span class="copy_discord_button" onclick="copyTag()" onmouseout="outFunc()">
+                        <span class="notification" id="copy_notification">Нажмите что-бы скопировать</span>
+                        <img src="../src/discord-icon.png" height="25">
+                        <span class="copy_discord_tag" id="copy_discord_tag">IWantTo#5939</span>
+                        <span class="counter_to_copy" id="counter_to_copy">0</span>
+                    </span>
+                </div>
+
+                <span class="border"></span>
+
+                <span class="gmail_url tag_copy_button" onclick="copyUrlGmail()" onmouseout="outFuncUrl()">
+                    <span class="notification" id="copy_notification_gmail">Нажмите что-бы скопировать</span>
+                    <span style="color: rgb(255, 80, 41);">G</span>mail - <span id="copy_gmail_url">undefisc@gmail.com</span>
+                </span>
+
+        </footer>
+        <div class="shadow_button" id="shadow_button" style="visibility: hidden; position: fixed; z-index: 5; height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.419);" onclick="toggle.call(document.getElementById(`nav-toggle`))"></div>
+     </div>
+
+        
+        <script src="../js/adaptive.js"></script>
+    </body>
+</html>
+
